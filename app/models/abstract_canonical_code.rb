@@ -1,0 +1,2 @@
+class AbstractCanonicalCode < ApplicationRecord
+end

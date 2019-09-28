@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Abstract Canonical Codes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Code</th>
+      <th>Sha digest</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @abstract_canonical_codes.each do |abstract_canonical_code| %>
+      <tr>
+        <td><%= abstract_canonical_code.code %></td>
+        <td><%= abstract_canonical_code.sha_digest %></td>
+        <td><%= link_to 'Show', abstract_canonical_code %></td>
+        <td><%= link_to 'Edit', edit_abstract_canonical_code_path(abstract_canonical_code) %></td>
+        <td><%= link_to 'Destroy', abstract_canonical_code, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Abstract Canonical Code', new_abstract_canonical_code_path %>

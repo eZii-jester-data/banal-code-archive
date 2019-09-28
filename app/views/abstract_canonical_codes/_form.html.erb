@@ -1,0 +1,27 @@
+<%= form_with(model: abstract_canonical_code, local: true) do |form| %>
+  <% if abstract_canonical_code.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(abstract_canonical_code.errors.count, "error") %> prohibited this abstract_canonical_code from being saved:</h2>
+
+      <ul>
+        <% abstract_canonical_code.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :code %>
+    <%= form.text_area :code %>
+  </div>
+
+  <div class="field">
+    <%= form.label :sha_digest %>
+    <%= form.text_area :sha_digest %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

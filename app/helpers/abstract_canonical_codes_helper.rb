@@ -1,0 +1,2 @@
+module AbstractCanonicalCodesHelper
+end
